@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .biggest{
+            margin:auto;
+        }
+        @media screen and (min-width:1200px){
+            .biggest{
+                width:1000px;
+                display:flex;
+                margin:auto;
+            }
+            .biggest div{
+                width:25%;
+                text-align: center;
+                line-height: 60px;
+                color: white;
+            }
+        }
+        @media screen and (min-width:992px) and (max-width:1200px){
+            .biggest{
+                width:1000px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .biggest div{
+                text-align: center;
+                line-height: 60px;
+                color: white;
+            }
+            .biggest div:nth-child(1){
+                flex: 100%;
+            }
+            .biggest div:nth-child(n+2){
+                flex-grow: 1;
+            }
+
+        }
+        @media screen and (min-width:768px) and (max-width:992px){
+            .biggest{
+                width:600px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .biggest div{
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                flex:50%;
+            }
+        }
+        @media screen and (max-width:768px){
+            .biggest{
+                width:600px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .biggest div{
+                text-align: center;
+                line-height: 60px;
+                color: white;
+                flex:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="biggest">
+        <div style="background: red;">1</div>
+        <div style="background: blue;">2</div>
+        <div style="background: black;">3</div>
+        <div style="background: orange;">4</div>
+    </div>
+
+</body>
+</html>
